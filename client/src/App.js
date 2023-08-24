@@ -8,7 +8,7 @@ const App = () => {
   useEffect(() => {
     const fetchData = async () => {
       const result = await fetch(
-        `http://localhost:5005/api/activities`
+        `${process.env.REACT_APP_BACKEND_URL}/activities`
       );
       const data = await result.json();
       setActivities(data);
@@ -25,8 +25,8 @@ const App = () => {
       time: event.target.time.value,
     };
     
-    // await fetch(`${process.env.REACT_APP_BACKEND_URL}/activity`, {
-    await fetch(`http://localhost:5005/api/activity`, {
+    await fetch(`${process.env.REACT_APP_BACKEND_URL}/activity`, {
+    // await fetch(`http://localhost:5005/api/activity`, {
 
       method: "POST",
       headers: {
