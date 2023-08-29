@@ -15,8 +15,15 @@ This is to link the Client side and Server side code together. This variable is 
 
 ### Server Side Code:
 Create a folder called 'server'. Open it in the Terminal and type 'npm init'. This creates a package.json file.
+Run the following command: npm i express mongoose dotenv
+
+express: Used to create a server.
+mongoose: Used to work with MongoDB database
+dotenv: Used to load environment variables.
+
 Add the main file called 'server.js' inside the server folder.
-Create a .env file and add the url for MongoDB connection. 
+Create a .env file and add the url for MongoDB connection. It should look like this: MONGODB_URI=yourconnectionstring
+
 Use the command 'npm run dev' to check if your NodeJS application is running properly or not.
 Created folders Activity, Routes and Models which were needed for this sample project. 
 Folder structure should look like : 
